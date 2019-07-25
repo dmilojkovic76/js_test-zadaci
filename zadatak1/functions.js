@@ -4,7 +4,7 @@
  * @param {Integer} max
  * @returns {Integer}
  */
-const random = (min, max) => {
+exports.random = (min, max) => {
 	if (!min || !max || Number.isNaN(min) || Number.isNaN(max)) {
 		return 'Greska! Ulazni parametri moraju biti tipa int!';
 	} else if (Number.isInteger(min) && Number.isInteger(max)) {
@@ -13,24 +13,44 @@ const random = (min, max) => {
 }
 
 /**
- * Vratiti najmanji broj koji se nalazi u nizu
+ * Vratiti najmanji broj koji se nalazi u nizu 'array'
  * @param {Array} array
- * @returns - najmanji broj koji se nalazi u nizu array
  */
-const minIntegerFromArray = (array) => {
-	if (Array.isArray(array)) {
-		console.log('works');
-		return array.sort((a, b) => a-b)[0];
+exports.minIntegerFromArray = (array) => {
+	if (Array.isArray(array) && array.length > 5) {
+		return array.filter((v) => Number.isInteger(v)).sort((a, b) => a-b)[0];
 	}
+	return false;
 }
 
-const minIntegerFromString = (string) => {}
+/**
+ * Vrati najmanji od postojecih brojeva u stringu ili false ako nema brojeve
+ * @param {string} string
+ */
+exports.minIntegerFromString = (string) => {
+	if (string.length >= 10) {
+		const nums = [];
+		for(let i = 0; i < string.length - 1; i++){
+			if (Number.isInteger(parseInt(string[i]))) {
+				let currNum = string[i];
+				for (let j = i + 1; j < string.length; j++) {
+					if (Number.isInteger(parseInt(string[j]))) {
+						currNum += string[j];
+					} else {
+						nums.push(parseInt(currNum));
+						i = j;
+						currNum = '';
+						break;
+					}
+				}
+			}
+		}
 
-const concatStringsByLength = (arrayOfStrings, type) => {}
+		return nums.sort((a,b) => a-b)[0];
+	}
+	return 0;
+}
 
-exports.random;
-exports.minIntegerFromArray;
-exports.minIntegerFromString;
-exports.concatStringsByLength;
-
-console.log(minIntegerFromArray([7, 1, 2]));
+exports.concatStringsByLength = (arrayOfStrings, type) => {
+	return 0;
+}
