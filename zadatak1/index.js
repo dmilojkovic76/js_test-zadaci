@@ -1,3 +1,3 @@
-import { random } from '.functions.js';
+const functions = require('./functions.js');
 
-random(1, 2);
+console.log(functions.random(1, 2));

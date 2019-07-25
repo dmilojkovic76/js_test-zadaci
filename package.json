@@ -1,0 +1,31 @@
+{
+  "name": "js_test-zadaci",
+  "version": "1.0.0",
+  "description": "Some public test for JS and Front End Developers",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^6.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmilojkovic76/js_test-zadaci.git"
+  },
+  "keywords": [
+    "js",
+    "java",
+    "script",
+    "tests",
+    "learning",
+    "practice"
+  ],
+  "author": "dmilojkovic76",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmilojkovic76/js_test-zadaci/issues"
+  },
+  "homepage": "https://github.com/dmilojkovic76/js_test-zadaci#readme"
+}
