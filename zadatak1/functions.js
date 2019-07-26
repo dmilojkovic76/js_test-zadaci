@@ -5,11 +5,10 @@
  * @returns {Integer}
  */
 exports.random = (min, max) => {
-	if (!min || !max || Number.isNaN(min) || Number.isNaN(max)) {
-		return 'Greska! Ulazni parametri moraju biti tipa int!';
-	} else if (Number.isInteger(min) && Number.isInteger(max)) {
+	if (Number.isInteger(min) && Number.isInteger(max)) {
 		return Math.round(min + Math.random()*(max-min));
 	}
+	return 'Greska! Ulazni parametri moraju biti tipa int!';
 }
 
 /**
@@ -18,7 +17,8 @@ exports.random = (min, max) => {
  */
 exports.minIntegerFromArray = (array) => {
 	if (Array.isArray(array) && array.length > 5) {
-		return array.filter((v) => Number.isInteger(v)).sort((a, b) => a-b)[0];
+		const r = array.filter((v) => Number.isInteger(v)).sort((a, b) => a-b)[0];
+		return Number.isInteger(r) ? r : 'Neispravni parametri unosa niza';
 	}
 	return false;
 }
@@ -45,12 +45,39 @@ exports.minIntegerFromString = (string) => {
 				}
 			}
 		}
-
-		return nums.sort((a,b) => a-b)[0];
+		const r = nums.sort((a,b) => a-b)[0];
+		return r ? r : false;
 	}
-	return 0;
+	return false;
 }
 
+/**
+ * Vrati sve stringove koji su uneti spojene u jedan, ali po odredjenom redosledu.
+ * Ako je type = 0 onda po rastucem ako je 1 onda po opadajucem redosledu
+ * @param {Array} arrayOfStrings
+ * @param {Number} type
+ * @function concatStringsByLength
+ */
 exports.concatStringsByLength = (arrayOfStrings, type) => {
-	return 0;
+	console.log(type);
+
+	if (type === 0 || type === 1) {
+
+		switch (type) {
+			case 0:
+
+				return arrayOfStrings.sort((a, b) => a.length-b.length).join('');
+				break;
+
+			case 1:
+
+				return arrayOfStrings.sort((a, b) => b.length-a.length).join('');
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	return 'Neispravan unos ulaznih parametara';
 }

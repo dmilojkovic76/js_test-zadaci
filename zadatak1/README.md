@@ -8,37 +8,36 @@ Autor: Zoran Lazic
 
 Potrebno je napraviti minimum 3 fajla.
 
-````sh
-index.js
-functions.js
-config.js
-````
+- index.js
+- functions.js
+- config.js
 
-``index.js`` ce pozivati funkcije iz fajla ``functions.js`` i prikazivati rezultate.
+
+`index.js` ce pozivati funkcije iz fajla `functions.js` i prikazivati rezultate.
 
 
 
 index.js se pokrece komandom
 
-````sh
+```sh
 node index.js
-````
+```
 
 
-Svi ulazni podaci funkcija moraju da se nalaze u fajlu ``config.js``. Promenom podataka u config-u i pokretanjem komande
-````sh
+Svi ulazni podaci funkcija moraju da se nalaze u fajlu `config.js`. Promenom podataka u config-u i pokretanjem komande
+```sh
 node index.js
-````
+```
 dobice se novi rezultati.
 
 
 
-U ``functions.js`` potrebno je napraviti sledece funkcije
+U `functions.js` potrebno je napraviti sledece funkcije
 
-#
-````js
+---
+```js
 function random(min, max){}
-````
+```
 
 Funkcija random treba da vrati random broj koji je veci ili jednak sa min ili manji ili jednak sa max.
 
@@ -47,14 +46,14 @@ Funkcija kao ulazne parametre sme da primi samo broj. Potrebno je validirati ula
 
 
 Primer
-````js
+```js
 random(1, 2) //  can return value  1, 2
-````
+```
 
-#
-````js
+---
+```js
 function minIntegerFromArray(array) {}
-````
+```
 
 Potrebno je vratiti najmanji broj koji se nalazi u nizu (array.length > 5). Niz ne mora da bude samo niz brojeva, vec moze sadrzati bilo sta kao clan niza. U slucaju da ne postoji ni jedan broj u nizu, vratiti false
 
@@ -64,16 +63,16 @@ Potrebno je validirati funkciju i prikazati adekvatnu gresku u slucaju neispravn
 
 Primer
 
-````js
+```js
 const array  = [1, ‘etf’, ‘kgj’, 4, 0, 2]
 
 minIntegerFromArray(array) // return 0
-````
+```
 
-#
-````js
+---
+```js
 function minIntegerFromString(string) {}
-````
+```
 
 U ovu funkciju se unosi neki string >= 10 karaktera. Funkcija mora da proveri da li u tom stringu postoje celi brojevi (integeri) i da kao rezultat vrati najmanji od postojecih brojeva ili false ako nije nadjen ni jedan.
 
@@ -83,14 +82,14 @@ Potrebno je validirati funkciju i prikazati adekvatnu gresku u slucaju neispravn
 
 Primer
 
-````js
+```js
 minIntegerFromString(‘Danas, 17tog Septembra, bice hladnije nego juce u 20h, 16og Septembra’) // return 16
-````
+```
 
-#
-````js
+---
+```js
 function concatStringsByLength(arrayOfStrings, type) {}
-````
+```
 
 Funkcija ima dva ulazna paramtera. Prvi je niz stringova, a drugi je tip koji moze imati vrednost 0, ili 1.
 
@@ -100,21 +99,23 @@ Funkcija kao rezultat  treba da vrati sve stringove koji su uneti spojene u jeda
 
 Primer
 
-````js
+```js
 const arrayOfStrings = [‘abc’, ‘ac’, ‘bdca’, ‘edagas’]
 
 type = 0
 
 concatStringsByLength(arrayOfStrings, type) // return acabcbdcaedagas
-````
+```
 
 
 Primer 2
 
-````js
+```js
 const arrayOfStrings = [‘abc’, ‘ac’, ‘bdca’, ‘edagas’]
 
 type = 1
 
 concatStringsByLength(arrayOfStrings, type) // return edagasbdcaabcac
-````
+```
+
+[../README.md](../README.md)
