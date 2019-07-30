@@ -17,14 +17,14 @@ U zagradi je definisana vrednost i kako se racuna dati property<br>
 Da bi jedinica napala, potrebno je da se ispuni **rechargeTime**. Pri svakom napadu, jedinica napada bilo koju drugu random jedinicu koja ima **health > 0**.
 
 _Napomena:_<br>
-U pitanju je asihrono ponasanje. Svaka jedinica napada onda kada se recharguje.<br>
+U pitanju je asinhrono ponasanje. Svaka jedinica napada onda kada se recharguje.<br>
 Svaka jedinica, moze da bude napadnuta dok napada.
 
 Svaka jedinica koja napadne, samo deliveruje damage, ne dobija nikakav damage.
 
 
 ### Critical Chance
-Critical chance se racuna tako sto je **crticalChance >=  random(0, 100);**<br>
+Critical chance se racuna tako sto je **criticalChance >=  random(0, 100);**<br>
 Ako je ispunjen uslov za CriticalChance, damage u tom trenutku je dupliran.
 
 Borba traje sve dok su minimum 2 jedinice zive.
