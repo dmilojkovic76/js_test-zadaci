@@ -3,6 +3,6 @@
 //  endCoordinate - niz u obliku [x, y] - Krajnja tacka u kojoj se zavrsava vas algoritam
 //  blocks - int (20 blokova treba da postoji) - Broj random tacaka kroz koje ne moze da se prodje.
 
-exports.startCoordinate = [0, 0];
-exports.endCoordinate = [3, 3];
-exports.blocks = 3;
+exports.startCoordinate = [3, 5]; // values 0...9
+exports.endCoordinate = [6, 9]; // values 0...9
+exports.blocks = 6;
