@@ -52,12 +52,12 @@ Primer matrice sa nepravilno generisanim blokovima
 
 
 **Napomena**<br>
-Ne postoji nikakav vizuelni prikaz zadatak i ovo se isljucivo radi u Node.js-u.
+Ne postoji nikakav vizuelni prikaz zadatka i ovo se isljucivo radi u Node.js-u.
 
 Kod se treba pokrenuti uz pomoc komande
-````sh
+```sh
 node index.js
-````
+```
 
 
 [../README.md](../README.md)
